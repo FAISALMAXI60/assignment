@@ -1,38 +1,99 @@
-.App {
+.container .check-link {
+  /* color: #666 !important; */
+  display: inline-block !important;
+  /* margin: 0; */
+  text-transform: uppercase !important;
+}
+
+.container .check-link:after {
+  display: block !important;
+  content: '';
+  padding-bottom: 15px;
+  border-bottom: solid 2px white !important;
+  transform: scaleX(0) !important;
+  transition: transform 250ms ease-in-out !important;
+}
+
+.container .check-link:hover:after {
+  transform: scaleX(1) !important;
+}
+
+
+.tabs-container .check-link {
+  display: inline-block !important;
+  /* text-transform: uppercase !important; */
+}
+
+.tabs-container .check-link:after {
+  display: block !important;
+  content: '';
+  position: relative;
+  top: 5px;
+  border-bottom: solid 3px white !important;
+  transform: scaleX(0) !important;
+  transition: transform 250ms ease-in-out !important;
+}
+
+.tabs-container .check-link:hover:after {
+  transform: scaleX(1) !important;
+}
+
+.tabs-container .check-link:hover{
+  color: white !important;
+  transition: 0.3s;
+}
+
+.box-plane1{
+  background: linear-gradient(to right, #c3faf9,#2ddfda) !important;
+}
+.cards-container{
+  margin:auto;
+  width:90%;
+  padding-top:40px;
+  margin-bottom: 60px;
+}
+.cards-container li::before{
+  text-indent: 3px;
+  content: '\2714';
+  color: #fff;
+  background-color: #ff531e;
+  height: 15px;
+  width: 15px;
   text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 11px;
+  position: relative;
+  top: -1px;
+  margin-right: 12px;
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.investmentButton .arrow-right{
+  display: inline-block;
+  transition: 0.2s ease-in;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.investmentButton:hover .arrow-right{
+  transform: translateX(19%);
+}
+.footerTopContainer .pin::after{
+  content: '';
+    display: block;
+    position: absolute;
+    height: 800px;
+    width: 3px;
+    left: 5px;
+    top: 15px;
+    background-color: #fba571;
+}
+
+@media only screen and (max-width: 599px) {
+  .footerTopContainer .pin::after{
+   display: none;
   }
-}
+  .footerTopContainer .pin{
+    display: none;
+   }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
